@@ -9,7 +9,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-body { background-color: var(--light-bg); color: var(--text-color); line-height: 1.6; }
+body { background-color: var(--light-bg); color: var(--text-color); line-height: 1.6; overflow-x: hidden; }
 a { text-decoration: none; }
 
 /* Navbar */
@@ -65,10 +65,12 @@ a { text-decoration: none; }
 /* Footer */
 footer { background: var(--dark-bg); color: var(--white); text-align: center; padding: 25px 20px; font-size: 0.9rem; margin-top: 40px; }
 
-/* Mobile Adjustments */
+/* Mobile Adjustments - Optimized */
 @media (max-width: 768px) {
-    .hero-content h1 { font-size: 2rem; }
-    .contact-wrapper { padding: 25px; }
-    .hero { height: auto; padding: 100px 20px; }
+    .hero-content h1 { font-size: 1.8rem; }
+    .hero-content p { font-size: 1rem; }
+    .contact-wrapper { grid-template-columns: 1fr; padding: 20px; }
+    .hero { height: auto; padding: 60px 20px; }
+    .service-grid { grid-template-columns: 1fr; }
+    .container { padding: 15px; }
 }
-
