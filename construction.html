@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>प्रीमियम घर बांधकाम | माऊली कन्स्ट्रक्शन</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">🚩 माऊली कन्स्ट्रक्शन अँड डेव्हलपर्स</div>
+        <div class="sub-logo">Prop: रघुनाथ जिरेवाड</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" style="background: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; height: 40vh;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content" style="max-width: 900px;">
+            <h1>तुमचे स्वप्नातले घर, आता सत्यात!</h1>
+            <p>खेड्यांमध्ये आणि ग्रामीण भागात अतिशय मजबूत व आधुनिक पद्धतीचे घर बांधकाम सेवा.</p>
+        </div>
+    </header>
+
+    <main class="con-wrapper">
+        <!-- Contact Details -->
+        <aside class="con-info-card">
+            <h2>आमची संपर्क माहिती</h2>
+            <div class="con-item">
+                <i class="fas fa-phone-alt"></i>
+                <div><h4 style="font-weight:normal; opacity:0.8;">कॉल करा</h4><p style="font-size:1.1rem; font-weight:bold;">+91 9529003453</p></div>
+            </div>
+            <div class="con-item">
+                <i class="fab fa-whatsapp"></i>
+                <div><h4 style="font-weight:normal; opacity:0.8;">WhatsApp</h4><p style="font-size:1.1rem; font-weight:bold;">+91 9503578851</p></div>
+            </div>
+            <div class="con-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div><h4 style="font-weight:normal; opacity:0.8;">पत्ता</h4><p style="font-size:1.1rem; font-weight:bold;">मु. जामगाव, ता. उमरी, नांदेड</p></div>
+            </div>
+            <div class="con-item">
+                <i class="fas fa-envelope"></i>
+                <div><h4 style="font-weight:normal; opacity:0.8;">ईमेल</h4><p style="font-size:1.1rem; font-weight:bold;">mauliborewellagency@outlook.com</p></div>
+            </div>
+        </aside>
+
+        <!-- Premium Enquiry Form -->
+        <section class="con-form-card">
+            <h2 style="color: var(--primary-color); margin-bottom: 10px; font-size: 1.8rem;">मोफत कोटेशन मिळवा</h2>
+            <p class="form-desc">खालील फॉर्म भरा. आमचे तज्ञ इंजिनिअर लवकरच तुमच्याशी संपर्क साधतील.</p>
+            
+            <!-- Lead directly to Outlook Mail -->
+            <form id="contactForm" action="https://formsubmit.co/mauliborewellagency@outlook.com" method="POST">
+                <input type="hidden" name="_subject" value="🚨 नवीन कन्स्ट्रक्शन लीड (Construction Lead) 🚨">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <!-- Submit hone ke baad wapas main page par aayega -->
+                <input type="hidden" name="_next" value="https://mauliborewellagency.online/">
+                
+                <div class="grid-2">
+                    <div class="input-group">
+                        <label>पूर्ण नाव (Full Name)</label>
+                        <input type="text" name="Client_Name" placeholder="उदा. रामराव पाटील" required>
+                    </div>
+                    <div class="input-group">
+                        <label>मोबाईल नंबर (Mobile)</label>
+                        <input type="tel" name="Mobile_Number" placeholder="१० अंकी नंबर" pattern="[0-9]{10}" required>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label>घर नंबर / गल्ली (House No / Area)</label>
+                    <input type="text" name="Address" placeholder="उदा. प्लॉट नं १२, हनुमान मंदिर जवळ" required>
+                </div>
+                
+                <div class="grid-2">
+                    <div class="input-group">
+                        <label>तालुका (Taluka)</label>
+                        <input type="text" name="Taluka" placeholder="तुमचा तालुका" required>
+                    </div>
+                    <div class="input-group">
+                        <label>जिल्हा (District)</label>
+                        <select name="District" required>
+                            <option value="" disabled selected>-- जिल्हा निवडा --</option>
+                            <option value="नांदेड">नांदेड</option>
+                            <option value="लातूर">लातूर</option>
+                            <option value="परभणी">परभणी</option>
+                            <option value="हिंगोली">हिंगोली</option>
+                            <option value="इतर">इतर</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label>बांधकामाचा प्रकार (Construction Type)</label>
+                    <select name="Construction_Type" required>
+                        <option value="" disabled selected>-- प्रकार निवडा --</option>
+                        <option value="नवीन घर पूर्ण बांधकाम">नवीन घर पूर्ण बांधकाम (New House)</option>
+                        <option value="जुन्या घराचे नूतनीकरण / दुरुस्ती">जुन्या घराचे नूतनीकरण / दुरुस्ती (Renovation)</option>
+                        <option value="व्यावसायिक गाळा किंवा दुकान">व्यावसायिक गाळा किंवा दुकान (Commercial Shop)</option>
+                        <option value="फक्त स्लॅब किंवा पाया भरणे">फक्त स्लॅब किंवा पाया भरणे (Slab/Foundation)</option>
+                    </select>
+                </div>
+                
+                <button type="submit" id="submitBtn" class="submit-btn">माहिती सबमिट करा <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </section>
+    </main>
+
+    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> मुख्य वेबसाईटवर परत जा</a>
+    <br><br>
+
+    <footer>
+        <p>&copy; 2026 माऊली कन्स्ट्रक्शन अँड डेव्हलपर्स, नांदेड. सर्व हक्क राखीव.</p>
+    </footer>
+
+    <!-- Script File Add -->
+    <script src="script.js"></script>
+</body>
+</html>
+
