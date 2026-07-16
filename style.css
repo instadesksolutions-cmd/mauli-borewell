@@ -94,20 +94,39 @@ footer { background: var(--dark-bg); color: var(--white); text-align: center; pa
 .back-link:hover { color: var(--secondary-color); }
 
 
-/* Mobile Adjustments - Original + New Fixes */
+/* Mobile Adjustments - Optimized & Fixed */
 @media (max-width: 768px) {
-    /* Tera Original Mobile CSS */
+    /* Navbar Mobile Fix */
+    .logo { font-size: 20px; line-height: 1.4; }
+
+    /* Main Page Fixes */
     .hero-content h1 { font-size: 1.8rem; }
     .hero-content p { font-size: 1rem; }
     .contact-wrapper { grid-template-columns: 1fr; padding: 20px; }
     .hero { height: auto; padding: 60px 20px; }
     .service-grid { grid-template-columns: 1fr; }
     .container { padding: 15px; }
-    
-    /* Naye Pages Ka Mobile CSS */
-    .con-wrapper { grid-template-columns: 1fr; padding: 20px; }
+
+    /* ======== Construction Page UI Mobile Fix ======== */
+    .con-wrapper { 
+        grid-template-columns: 1fr; 
+        padding: 15px; 
+        margin: 10px auto; 
+        width: 100%; 
+        box-sizing: border-box;
+    }
+    .con-info-card, .con-form-card { 
+        padding: 25px 15px; /* Padding kam ki gayi hai */
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .con-item p { font-size: 1rem !important; }
     .grid-2 { grid-template-columns: 1fr; }
+
+    /* Popup Mobile Fixes */
     .popup-grid { flex-direction: column; }
     .popup-img { min-height: 200px; }
     .popup-text h2 { font-size: 1.5rem; }
+    .popup-text { padding: 20px; }
 }
