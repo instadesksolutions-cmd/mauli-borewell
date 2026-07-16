@@ -9,7 +9,16 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-body { background-color: var(--light-bg); color: var(--text-color); line-height: 1.6; overflow-x: hidden; }
+
+/* Mobile Overflow Fix */
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden; /* Screen ke bahar kisi bhi cheez ko jaane se rokega */
+    background-color: var(--light-bg); 
+    color: var(--text-color); 
+    line-height: 1.6;
+}
+
 a { text-decoration: none; }
 
 /* Navbar */
@@ -66,7 +75,6 @@ a { text-decoration: none; }
 /* Footer */
 footer { background: var(--dark-bg); color: var(--white); text-align: center; padding: 25px 20px; font-size: 0.9rem; margin-top: 40px; }
 
-
 /* ================= PREMIUM POPUP STYLES ================= */
 .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 25, 47, 0.85); display: none; align-items: center; justify-content: center; z-index: 99999; opacity: 0; transition: opacity 0.4s ease; }
 .popup-overlay.show { display: flex; opacity: 1; }
@@ -84,17 +92,17 @@ footer { background: var(--dark-bg); color: var(--white); text-align: center; pa
 
 /* ================= CONSTRUCTION PAGE UI ================= */
 .con-wrapper { max-width: 1100px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 30px; }
-.con-info-card { background: var(--primary-color); color: white; padding: 40px; border-radius: 15px; height: fit-content; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.con-info-card { background: var(--primary-color); color: white; padding: 40px; border-radius: 15px; height: fit-content; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; }
 .con-info-card h2 { margin-bottom: 30px; border-bottom: 2px solid rgba(255,255,255,0.2); padding-bottom: 15px; }
 .con-item { display: flex; align-items: center; margin-bottom: 25px; }
-.con-item i { background: var(--secondary-color); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 10px; font-size: 1.2rem; margin-right: 15px; }
+.con-item i { background: var(--secondary-color); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 10px; font-size: 1.2rem; margin-right: 15px; flex-shrink: 0; }
+.con-item p { word-break: break-word; overflow-wrap: break-word; } /* Long text break karega */
 .con-form-card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .back-link { display: block; text-align: center; margin-top: 30px; color: var(--primary-color); font-weight: bold; }
 .back-link:hover { color: var(--secondary-color); }
 
-
-/* Mobile Adjustments - Optimized & Fixed */
+/* ================= MOBILE RESPONSIVE FIXES ================= */
 @media (max-width: 768px) {
     /* Navbar Mobile Fix */
     .logo { font-size: 20px; line-height: 1.4; }
@@ -102,10 +110,10 @@ footer { background: var(--dark-bg); color: var(--white); text-align: center; pa
     /* Main Page Fixes */
     .hero-content h1 { font-size: 1.8rem; }
     .hero-content p { font-size: 1rem; }
-    .contact-wrapper { grid-template-columns: 1fr; padding: 20px; }
+    .contact-wrapper { grid-template-columns: 1fr; padding: 20px; width: 100%; box-sizing: border-box; }
     .hero { height: auto; padding: 60px 20px; }
     .service-grid { grid-template-columns: 1fr; }
-    .container { padding: 15px; }
+    .container { padding: 15px; width: 100%; box-sizing: border-box; }
 
     /* ======== Construction Page UI Mobile Fix ======== */
     .con-wrapper { 
@@ -116,7 +124,7 @@ footer { background: var(--dark-bg); color: var(--white); text-align: center; pa
         box-sizing: border-box;
     }
     .con-info-card, .con-form-card { 
-        padding: 25px 15px; /* Padding kam ki gayi hai */
+        padding: 25px 15px; 
         margin-bottom: 20px;
         width: 100%;
         box-sizing: border-box;
