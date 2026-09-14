@@ -3,131 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mauli Borewell Agency | नांदेड</title>
-    <link rel="stylesheet" href="style.css">
+    <title>माऊली बोअरवेल एजन्सी & कन्स्ट्रक्शन | नांदेड</title>
+    
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">🚩 माऊली बोअरवेल एजन्सी</div>
-        <div class="sub-logo">Prop: रघुनाथ जिरेवाड</div>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar glass-effect" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <i class="fas fa-droplet text-accent"></i> 
+                <div>
+                    <h1>माऊली</h1>
+                    <p>बोअरवेल & कन्स्ट्रक्शन</p>
+                </div>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">होम</a></li>
+                <li><a href="about.html">आमच्याबद्दल</a></li>
+                <li><a href="services.html">सेवा</a></li>
+                <li><a href="contact.html">संपर्क</a></li>
+            </ul>
+
+            <!-- Call Action -->
+            <div class="nav-contact">
+                <a href="tel:9529003453" class="btn-primary-outline">
+                    <i class="fas fa-phone-alt"></i> +91 9529003453
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="index.html" class="active">होम</a>
+            <a href="about.html">आमच्याबद्दल</a>
+            <a href="services.html">सेवा</a>
+            <a href="contact.html">संपर्क</a>
+        </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>पाणी हेच जीवन, आणि ते शोधणे आमचे काम!</h1>
-            <p>अत्याधुनिक मशिनरी आणि अनुभवी तज्ञांद्वारे नांदेड जिल्ह्यातील सर्वात खात्रीशीर बोअरवेल सेवा.</p>
+    <!-- ================= HERO SECTION ================= -->
+    <header class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <span class="badge">नांदेड मधील नं. १ सेवा</span>
+            <h1 class="hero-title">पाणी हेच जीवन, आणि <br><span class="text-accent">ते शोधणे आमचे काम!</span></h1>
+            <p class="hero-desc">अत्याधुनिक मशिनरी आणि अनुभवी तज्ञांद्वारे अचूक बोअरवेल आणि दर्जेदार घर बांधकाम सेवा.</p>
+            
             <div class="hero-buttons">
-                <a href="tel:9529003453" class="btn btn-call"><i class="fas fa-phone-alt"></i> कॉल करा</a>
-                <a href="https://wa.me/919503578851?text=नमस्कार, मला बोअरवेलसाठी चौकशी करायची आहे." target="_blank" class="btn btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="contact.html" class="btn-primary">
+                    मोफत कोटेशन मिळवा <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://wa.me/919503578851" target="_blank" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp वर बोला
+                </a>
             </div>
         </div>
     </header>
 
-    <div class="container">
-        
-        <section class="services">
-            <h2 class="section-title">आमच्या प्रीमियम सेवा</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <i class="fas fa-truck-monster service-icon"></i>
+    <!-- ================= HIGHLIGHT SERVICES ================= -->
+    <section class="section quick-services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>आमच्या <span class="text-accent">प्रीमियम सेवा</span></h2>
+                <div class="divider"></div>
+                <p>आम्ही पुरवत असलेल्या दर्जेदार सेवांची एक झलक</p>
+            </div>
+
+            <div class="grid-3">
+                <!-- Service 1 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon"><i class="fas fa-truck-monster"></i></div>
                     <h3>नवीन बोअरवेल</h3>
-                    <p>मोठी मशीन आणि हाय-स्पीड नदी मशीन उपलब्ध. कठीण खडकातही अचूक ड्रिलिंग.</p>
+                    <p>मोठी आणि हाय-स्पीड नदी मशीन उपलब्ध. कठीण खडकातही अचूक व वेगवान ड्रिलिंग.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-tools service-icon"></i>
-                    <h3>रि-बोअर सेवा</h3>
-                    <p>जुन्या आणि बंद पडलेल्या बोअरवेलची कार्यक्षमता वाढवण्यासाठी आधुनिक उपाय.</p>
+                <!-- Service 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon"><i class="fas fa-water"></i></div>
+                    <h3>पाणी सर्वेक्षण (Survey)</h3>
+                    <p>पाण्याचे अचूक पॉईंट शोधण्यासाठी प्रगत आणि शास्त्रशुद्ध भूजल (Groundwater) तंत्रज्ञान.</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-water service-icon"></i>
-                    <h3>पाणी सर्वेक्षण</h3>
-                    <p>पाण्याचे अचूक पॉईंट शोधण्यासाठी प्रगत आणि शास्त्रशुद्ध तंत्रज्ञान (Groundwater Survey).</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-section">
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h2>संपर्क माहिती</h2>
-                    <p class="address"><i class="fas fa-map-marker-alt"></i> <strong>पत्ता:</strong> मु. जामगाव, ता. उमरी, जि. नांदेड.</p>
-                    <p><i class="fas fa-phone-alt"></i> <strong>कॉल:</strong> <a href="tel:9529003453">9529003453</a></p>
-                    <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/919503578851">9503578851</a></p>
-                    
-                    <h3 class="social-title">आम्हाला फॉलो करा:</h3>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/mauli_borewell_agency?igsh=MWRxM2Z3NWEybXQxbA==" target="_blank" class="social-icon insta"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/1cKK6qiT2c/" target="_blank" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
-
-                <div class="form-container">
-                    <h2>ऑनलाईन चौकशी फॉर्म</h2>
-                    <p class="form-desc">खालील फॉर्म भरा, आमची टीम तुम्हाला लवकरच संपर्क करेल.</p>
-                    
-                    <form id="contactForm" action="https://formsubmit.co/mauliborewellagency@outlook.com" method="POST">
-                        <input type="hidden" name="_subject" value="नवीन बोअरवेल चौकशी - Website!">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                        
-                        <div class="input-group">
-                            <label>तुमचे पूर्ण नाव *</label>
-                            <input type="text" name="Name" required placeholder="उदा. रामराव पाटील">
-                        </div>
-                        <div class="input-group">
-                            <label>मोबाईल नंबर *</label>
-                            <input type="tel" name="Phone" required placeholder="तुमचा १० अंकी नंबर" pattern="[0-9]{10}">
-                        </div>
-                        <div class="input-group">
-                            <label>कोणती सेवा हवी आहे? *</label>
-                            <select name="Service" required>
-                                <option value="" disabled selected>-- सेवा निवडा --</option>
-                                <option value="नवीन बोअरवेल (मोठी/नदी मशीन)">नवीन बोअरवेल (मोठी/नदी मशीन)</option>
-                                <option value="जुना रि-बोअर">जुना रि-बोअर</option>
-                                <option value="पाणी सर्वेक्षण">पाणी सर्वेक्षण</option>
-                            </select>
-                        </div>
-                        <div class="input-group">
-                            <label>तुमचे गाव *</label>
-                            <input type="text" name="Village" required placeholder="गावाचे नाव">
-                        </div>
-                        <div class="input-group">
-                            <label>तालुका आणि जिल्हा *</label>
-                            <input type="text" name="Taluka_District" required placeholder="उदा. उमरी, नांदेड">
-                        </div>
-                        <button type="submit" id="submitBtn" class="submit-btn">माहिती सबमिट करा <i class="fas fa-paper-plane"></i></button>
-                    </form>
+                <!-- Service 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon"><i class="fas fa-home"></i></div>
+                    <h3>प्रीमियम घर बांधकाम</h3>
+                    <p>मजबूत पाया आणि आधुनिक डिझाइनसह तुमच्या स्वप्नातील घराचे बांधकाम आता सत्यात.</p>
                 </div>
             </div>
-        </section>
-    </div>
+            
+            <div class="center-btn" data-aos="fade-up" data-aos-delay="400">
+                <a href="services.html" class="btn-secondary">सर्व सेवा पहा <i class="fas fa-plus"></i></a>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 माऊली बोअरवेल एजन्सी, नांदेड. सर्व हक्क राखीव.</p>
-    </footer>
-
-    <!-- ================= PREMIUM CONSTRUCTION POPUP ================= -->
-    <div id="construction-popup" class="popup-overlay">
-        <div class="popup-card">
-            <button class="close-btn" id="closePopupBtn">&times;</button>
-            <div class="popup-grid">
-                <div class="popup-img"></div>
-                <div class="popup-text">
-                    <span class="premium-tag"><i class="fas fa-star"></i> नवीन प्रीमियम सेवा</span>
-                    <h2>आता बोअरवेलसोबतच घर बांधा टेन्शन फ्री!</h2>
-                    <p>माऊली कन्स्ट्रक्शन घेऊन आले आहेत ग्रामीण भागासाठी खास प्रीमियम घर बांधकाम सेवा. दर्जेदार मटेरियल आणि आधुनिक डिझाइन.</p>
-                    <ul class="benefit-list">
-                        <li><i class="fas fa-check-circle"></i> मोफत कोटेशन (Free Quote)</li>
-                        <li><i class="fas fa-check-circle"></i> मजबूत पाया आणि अनुभवी इंजिनिअर्स</li>
-                    </ul>
-                    <a href="construction.html" class="main-cta-btn">विनामूल्य माहिती मिळवा <i class="fas fa-arrow-right"></i></a>
+    <!-- ================= WHY CHOOSE US STATS ================= -->
+    <section class="section stats-section">
+        <div class="container">
+            <div class="grid-4 text-center">
+                <div class="stat-box" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-users"></i>
+                    <h3>५००+</h3>
+                    <p>संतुष्ट ग्राहक</p>
+                </div>
+                <div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-cogs"></i>
+                    <h3>आधुनिक</h3>
+                    <p>मशिनरी</p>
+                </div>
+                <div class="stat-box" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-clock"></i>
+                    <h3>२४/७</h3>
+                    <p>सपोर्ट उपलब्ध</p>
+                </div>
+                <div class="stat-box" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>१००%</h3>
+                    <p>कामाची हमी</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
+    <!-- ================= FOOTER ================= -->
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 माऊली बोअरवेल एजन्सी & कन्स्ट्रक्शन. सर्व हक्क राखीव.</p>
+                <p class="developer">Designed by <a href="https://qwickdesksolutions.co.in" target="_blank">QwickDesk Solutions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom Script -->
     <script src="script.js"></script>
 </body>
 </html>
