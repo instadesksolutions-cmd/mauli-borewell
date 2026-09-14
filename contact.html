@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="माऊली बोअरवेल आणि कन्स्ट्रक्शनशी संपर्क साधा. नवीन बोअरवेल किंवा घर बांधकामासाठी मोफत कोटेशन मिळवा.">
+    <title>संपर्क करा | माऊली बोअरवेल & कन्स्ट्रक्शन</title>
+    
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Page Specific Styles for Form -->
+    <style>
+        .contact-page-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            margin-top: -40px; /* Overlaps the header slightly for a 3D effect */
+            position: relative;
+            z-index: 10;
+        }
+        
+        .contact-info-card {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            height: fit-content;
+        }
+        
+        .contact-info-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-item i {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            flex-shrink: 0;
+        }
+        
+        .info-item h4 {
+            font-size: 0.9rem;
+            color: #d1d5db;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .info-item p, .info-item a {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+        
+        .contact-form-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid #f3f4f6;
+        }
+        
+        .contact-form-card h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .contact-form-card p {
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+        
+        .form-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .input-group {
+            margin-bottom: 25px;
+        }
+        
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+        }
+        
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 15px;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: #f9fafb;
+            color: var(--text-dark);
+        }
+        
+        .input-group input:focus, .input-group select:focus {
+            border-color: var(--accent-color);
+            outline: none;
+            background: var(--white);
+            box-shadow: 0 0 0 4px rgba(255, 107, 0, 0.1);
+        }
+        
+        .submit-btn-full {
+            width: 100%;
+            padding: 16px;
+            background: var(--accent-color);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+        }
+        
+        .submit-btn-full:hover {
+            background: var(--primary-color);
+            box-shadow: 0 8px 25px rgba(11, 32, 70, 0.3);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .contact-page-wrapper {
+                grid-template-columns: 1fr;
+                margin-top: 0;
+            }
+            .form-grid-2 {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .contact-info-card, .contact-form-card {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- ================= MAIN NAVBAR ================= -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-droplet"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>माऊली</h1>
+                    <p>बोअरवेल & कन्स्ट्रक्शन</p>
+                </div>
+            </a>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">होम</a></li>
+                <li><a href="about.html">आमच्याबद्दल</a></li>
+                <li><a href="services.html">सेवा</a></li>
+                <li><a href="contact.html" class="active">संपर्क</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="tel:9529003453" class="call-btn">
+                    <i class="fas fa-phone-volume"></i> 
+                    <div class="call-text">
+                        <span>कॉल करा</span>
+                        <strong>+91 952900 3453</strong>
+                    </div>
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="index.html">होम</a>
+            <a href="about.html">आमच्याबद्दल</a>
+            <a href="services.html">सेवा</a>
+            <a href="contact.html" class="active">संपर्क</a>
+        </div>
+    </nav>
+
+    <!-- ================= PAGE HEADER ================= -->
+    <section class="cta-banner" style="padding: 100px 0 140px; background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356f58?auto=format&fit=crop&w=1920&q=80');">
+        <div class="cta-overlay" style="background: rgba(11, 32, 70, 0.9);"></div>
+        <div class="container cta-content">
+            <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 10px;">संपर्क करा</h1>
+            <p style="font-size: 1.2rem; color: #d1d5db;">तुमच्या सर्व प्रश्नांची उत्तरे मिळवण्यासाठी आणि मोफत कोटेशनसाठी आजच संपर्क साधा.</p>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT & FORM SECTION ================= -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container contact-page-wrapper">
+            
+            <!-- Left Side: Contact Information -->
+            <div class="contact-info-card" data-aos="fade-up" data-aos-delay="100">
+                <h3>आमची संपर्क माहिती</h3>
+                
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>मुख्य कार्यालय (Office)</h4>
+                        <p>मु. जामगाव, ता. उमरी,<br>जि. नांदेड - ४३१८०७</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>कॉल करा (Call Us)</h4>
+                        <a href="tel:9529003453">+91 9529003453</a>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h4>WhatsApp नंबर</h4>
+                        <a href="https://wa.me/919503578851">+91 9503578851</a>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>ईमेल (Email)</h4>
+                        <p style="font-size: 1rem;">mauliborewellagency<br>@outlook.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Advanced Lead Form -->
+            <div class="contact-form-card" data-aos="fade-up" data-aos-delay="200">
+                <h2>मोफत कोटेशन मिळवा</h2>
+                <p>खालील फॉर्म भरा, आमचे तज्ञ इंजिनिअर लवकरच तुमच्याशी संपर्क साधतील.</p>
+                
+                <form id="contactForm" action="https://formsubmit.co/mauliborewellagency@outlook.com" method="POST">
+                    <!-- FormSubmit Configurations -->
+                    <input type="hidden" name="_subject" value="🚨 नवीन चौकशी (New Lead from Website) 🚨">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <!-- Aap is link ko apne domain se replace kar sakte hain -->
+                    <input type="hidden" name="_next" value="https://mauliborewellagency.online/">
+                    
+                    <div class="form-grid-2">
+                        <div class="input-group">
+                            <label>पूर्ण नाव (Full Name)</label>
+                            <input type="text" name="Client_Name" placeholder="उदा. रामराव पाटील" required>
+                        </div>
+                        <div class="input-group">
+                            <label>मोबाईल नंबर (Mobile)</label>
+                            <input type="tel" name="Mobile_Number" placeholder="१० अंकी नंबर" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>घर नंबर / गल्ली (Address)</label>
+                        <input type="text" name="Address" placeholder="उदा. प्लॉट नं १२, हनुमान मंदिर जवळ" required>
+                    </div>
+                    
+                    <div class="form-grid-2">
+                        <div class="input-group">
+                            <label>तालुका (Taluka)</label>
+                            <input type="text" name="Taluka" placeholder="तुमचा तालुका" required>
+                        </div>
+                        <div class="input-group">
+                            <label>जिल्हा (District)</label>
+                            <select name="District" required>
+                                <option value="" disabled selected>-- जिल्हा निवडा --</option>
+                                <option value="नांदेड">नांदेड</option>
+                                <option value="लातूर">लातूर</option>
+                                <option value="परभणी">परभणी</option>
+                                <option value="हिंगोली">हिंगोली</option>
+                                <option value="इतर">इतर</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>कोणती सेवा हवी आहे? (Service Type)</label>
+                        <select name="Service_Type" required>
+                            <option value="" disabled selected>-- सेवा निवडा --</option>
+                            <option value="नवीन बोअरवेल (New Borewell)">नवीन बोअरवेल (नदी / मोठी मशीन)</option>
+                            <option value="जुना रि-बोअर (Re-Bore)">जुना रि-बोअर</option>
+                            <option value="पाणी सर्वेक्षण (Water Survey)">पाणी सर्वेक्षण (अचूक पॉईंट)</option>
+                            <option value="नवीन घर बांधकाम (New House)">नवीन घर बांधकाम (कन्स्ट्रक्शन)</option>
+                            <option value="घराचे नूतनीकरण (Renovation)">जुन्या घराचे नूतनीकरण / दुरुस्ती</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" id="submitBtn" class="submit-btn-full">
+                        माहिती सबमिट करा <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER (Minimal for Contact Page) ================= -->
+    <footer style="background: var(--primary-color); padding: 25px 0; text-align: center; color: #9ca3af; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container">
+            <p>&copy; 2026 माऊली बोअरवेल एजन्सी & कन्स्ट्रक्शन. सर्व हक्क राखीव.</p>
+            <p style="margin-top: 5px; font-size: 0.9rem;">Designed by <a href="https://qwickdesksolutions.co.in" target="_blank" style="color: var(--accent-color); font-weight: bold;">QwickDesk Solutions</a></p>
+        </div>
+    </footer>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
